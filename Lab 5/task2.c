@@ -9,7 +9,7 @@ sleepIn(false, true) → true */
 int main(){
 	int weekday;
 	char vacation;
-	printf("enter weekday number, 1 to 7 ");
+	printf("enter weekday number, 1 to 7 (1 is Monday, 7 is Sunday)");
 	scanf ("%d", &weekday);
 	printf("enter vacation, y for yes n for no ");
 	scanf(" %c", &vacation);
