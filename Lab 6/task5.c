@@ -1,9 +1,9 @@
 /*5.Make a pattern mentioned below using loops
 * * * * * 
-*         *
-*         *
-*         *
-*         *
+*       *
+*       *
+*       *
+*       *
 * * * * *
 */
 
