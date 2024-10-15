@@ -8,12 +8,15 @@ int main ()
     char str[50];
     int length, i;
     int a=0, e=0, ii=0, o=0, u=0;
+    for (i=0; i<50; i++)
+    {
+        str[i] = 'z';
+    }
 
     printf ("enter a short string\n");
     gets (str);   
 
-    length=sizeof(str) / 4;
-    for (i=0; i<length; i++)
+    for (i=0; i<50; i++)
     {
         if (str[i] == 'A' || str[i] == 'a')
             a++;
@@ -36,5 +39,4 @@ int main ()
     printf("Count of I is %d\n", ii);
     printf("Count of O is %d\n", o);
     printf("Count of U is %d\n", u);
-
 }
