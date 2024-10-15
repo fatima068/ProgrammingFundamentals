@@ -10,7 +10,7 @@ int main ()
     int a=0, e=0, ii=0, o=0, u=0;
 
     printf ("enter a short string\n");
-    scanf ("%s", str);   
+    gets (str);   
 
     length=sizeof(str) / 4;
     for (i=0; i<length; i++)
