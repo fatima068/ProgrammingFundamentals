@@ -15,7 +15,6 @@ int main ()
         endptr++;
         i++;
     }
-    printf("length of string is %d\n", length);
     
     //storing original string in a new variable
     for(i=0; i<length; i++)
@@ -35,7 +34,6 @@ int main ()
         startptr++;
         endptr--;
     }
-    printf("reversed string: %s\n", str);
     
     //comparing original and reversed string 
     int flag =1;
