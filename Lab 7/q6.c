@@ -14,7 +14,7 @@ Note: You cannot utilize nested loops.*/
 #include <stdio.h>
 int main ()
 {
-    int i, n, number;
+    int i, n, number=-1;
     printf("enter size of array\n");
     scanf("%d", &n);
     int arr[n], freq[n];
@@ -29,7 +29,7 @@ int main ()
         scanf("%d", &arr[i]);
     }
     
-		\\storing frequencies in frequency array & checking which number occurs more than once 
+		//storing frequencies in frequency array & checking which number occurs more than once 
     for (i=0; i<n; i++)
     {
           freq[arr[i]] += 1;
@@ -39,5 +39,13 @@ int main ()
               break;
           }
     }
-    printf("number occuring more than once is is %d", number);
+    if (number == -1)
+    {
+        printf("no number occurs more than once");
+    }
+    else
+    {
+        printf("number occuring more than once is is %d", number);
+
+    }
 }
