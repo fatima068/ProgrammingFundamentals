@@ -3,8 +3,8 @@
 #include <stdio.h>
 int main ()
 {
-   int matrix[3][3], i, j, col, flag = 0, row;
-   
+   int matrix[3][3], i, j, col, flag = 0, row, srow;
+
    //TAKING INPUT TO STORE VALUES IN MATRIX
    for (i=0; i<3; i++)
    {
@@ -14,7 +14,7 @@ int main ()
            scanf("%d", &matrix[i][j]);
        }
    }
-   
+
    //FINDING SADDLE POINT
    //SEARCHING ROW FOR MINIMUM
    for (i=0; i<3; i++)
@@ -35,17 +35,18 @@ int main ()
            if (matrix[row][col] > maximum)
             {
                 maximum = matrix[row][col];
+                srow = row;
             }
        }
         if (maximum == minimum)
         {
-            printf("saddle point is %d\n ", maximum);
-            printf("position of saddle point is row %d, column %d", row-1, col);
+            printf("saddle point is %d\n", maximum);
+            printf("position of saddle point is row %d, column %d", srow, col);
             flag = 1;
         }
    }
-   
+
    if (flag == 0)
         printf("no saddle point found");
-   
+
 }
