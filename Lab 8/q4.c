@@ -32,7 +32,7 @@ int main()
             colA=0;
             rowB=0;
             colB=rowC;
-            matrixC[rowC][colC] = (matrixA[rowA][colA]*matrixB[rowB][colB]) + (matrixA[rowA][colA+1]*matrixB[rowB+1][colB]) + (matrixA[rowA][colA+2]*matrixB[rowB+2][colB]);
+            matrixC[colC][rowC] = (matrixA[rowA][colA]*matrixB[rowB][colB]) + (matrixA[rowA][colA+1]*matrixB[rowB+1][colB]) + (matrixA[rowA][colA+2]*matrixB[rowB+2][colB]);
         }
     }
     printf("RESULT OF MULTIPLICATION\n");
@@ -62,5 +62,4 @@ int main()
         }
         printf("\n");
     }
-    
 }
