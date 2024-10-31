@@ -3,18 +3,27 @@
 #include <stdio.h>
 int main()
 {
-    int matrixA[3][3] = {
-                        {1, 2, 3},
-                        {4, 5, 6},
-                        {7, 8, 9},
-                        };
-    int matrixB[3][3] = {
-                        {3, 2, 2},
-                        {6, 4, 5},
-                        {9, 8, 7},
-                        };
-    int matrixC[3][3];
+    int matrixA[3][3], matrixB[3][3], matrixC[3][3];
     int rowA, rowB, rowC, colA, colB, colC, x, y;
+    
+    printf("enter matrixA elements:\n");
+    for(x=0; x<3; x++)
+    {
+        for(y=0; y<3; y++)
+        {
+            scanf("%d", &matrixA[x][y]);
+        }
+    }
+    
+     printf("enter matrixB elements:\n");
+    for(x=0; x<3; x++)
+    {
+        for(y=0; y<3; y++)
+        {
+            scanf("%d", &matrixB[x][y]);
+        }
+    }
+    
     for(colC=0; colC<3; colC++)
     {
         for(rowC=0; rowC<3; rowC++)
@@ -36,6 +45,22 @@ int main()
         printf("\n");
     }
     
+    for(x=0; x<3; x++)
+    {
+        for(y=0; y<3; y++)
+        {
+            matrixC[x][y] = matrixC[x][y] - matrixA[x][y];
+        }
+    }
     
+    printf("\nAFTER SUBTRACTING MATRIX A FROM RESULT OF MULTIPLICATION\n");
+    for(x=0; x<3; x++)
+    {
+        for(y=0; y<3; y++)
+        {
+            printf("%d ", matrixC[x][y]);
+        }
+        printf("\n");
+    }
     
 }
