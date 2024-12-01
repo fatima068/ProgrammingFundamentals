@@ -22,9 +22,13 @@ int main ()
     printf ("enter new array size: ");
     scanf("%d", &x);
     arr =(int*)realloc(arr, x*sizeof(int));
-    for(int i=n; i<x; i++)
+    
+    if(x>n)
     {
-        printf ("enter element %d: ", i+1);
-        scanf("%d", &arr[i]);
-    }
+       for(int i=n; i<x; i++)
+       {
+            printf ("enter element %d: ", i+1);
+            scanf("%d", &arr[i]);
+       } 
+    }    
 }
