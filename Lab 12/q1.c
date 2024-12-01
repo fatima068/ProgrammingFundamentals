@@ -9,7 +9,7 @@ int main()
     printf ("Enter num of array elements: ");
     scanf("%d", &n);
     int* arr = (int*)malloc(n*sizeof(int));
-    for(int i = 0; i<5; i++)
+    for(int i = 0; i<n; i++)
     {
         printf ("Enter element %d: ", i+1);
         scanf("%d", &arr[i]);
