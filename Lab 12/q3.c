@@ -10,7 +10,7 @@ Take the same array and resize it.*/
 
 int main ()
 {
-    int n, x;
+    int n, x, largest = -9999;
     printf ("enter array size: ");
     scanf("%d", &n);
     int* arr =(int*)malloc(n*sizeof(int));
@@ -19,10 +19,17 @@ int main ()
         printf ("enter element %d: ", i+1);
         scanf("%d", &arr[i]);
     }
+    for(int i=0; i<n; i++)
+    {
+        if (arr[i] > largest)
+            largest=arr[i];
+    }
+    printf ("LARGEST: %d\n", largest);
+        
     printf ("enter new array size: ");
     scanf("%d", &x);
     arr =(int*)realloc(arr, x*sizeof(int));
-    
+
     if(x>n)
     {
        for(int i=n; i<x; i++)
@@ -31,4 +38,11 @@ int main ()
             scanf("%d", &arr[i]);
        } 
     }    
+    largest = -9999;
+    for(int i=0; i<x; i++)
+    {
+        if (arr[i] > largest)
+            largest=arr[i];
+    }
+    printf ("NEW LARGEST: %d", largest);
 }
