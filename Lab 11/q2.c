@@ -24,7 +24,7 @@ int main() {
         words[i].count = 0;
     }
 
-    while (fscanf(file, "%s", word) != EOF) 
+    while (fscanf(fptr, "%s", word) != EOF) 
     {
         int found = 0;
         for (i = 0; i < wordIndex; i++) 
@@ -47,7 +47,7 @@ int main() {
     fclose(fptr);
 
     printf("WORD COUNTS\n");
-    for (i = 0; i < wordIndex; i++) 
+    for (int i = 0; i < wordIndex; i++) 
     {
         printf("%s: %d\n", words[i].word, words[i].count);
     }
