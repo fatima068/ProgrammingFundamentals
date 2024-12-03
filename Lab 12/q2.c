@@ -14,8 +14,7 @@ int main()
 {
 	int a = 4, b = 5, c = 6;
 	swaped(&a, &b, &c);
-	printf("a = %d\nb = %d\nc = %d", a, b, c);
-	
+	printf("a = %d\nb = %d\nc = %d", a, b, c);	
 }
 
 void swaped(int* aPtr, int* bPtr, int* cPtr)
